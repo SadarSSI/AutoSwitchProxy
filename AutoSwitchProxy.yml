@@ -1,0 +1,45 @@
+# Set Parameters
+Profiles  : Work, Home
+SplitChar : ","
+
+UserProxySettings  : HKEY_USERS\$UserSid.SID\Software\Microsoft\Windows\CurrentVersion\Internet Settings
+DisableChangeProxy : HKEY_USERS\$UserSid.SID\Software\Policies\Microsoft\Internet Explorer\Control Panel
+
+ProxyEnable   : DWORD
+ProxyServer   : String
+ScecureProxy  : DWORD
+
+# used if no match works
+Default: 
+  PrxyEnable  : False
+  PrxyServer  : 
+  PrxySecure  : False
+
+Home:
+  SSIDLNetworkList : 00-WFx, 00-SDRx
+  DNSSuffix        : home.lan
+  CheckDnsName     : lansces
+
+  ProxyList:
+      Pry00 :
+        UsersList  : MLou, obo, albert, gg
+        PrxyEnable : True
+        PrxyServer : "192.168.1.5:8118"
+        PrxySecure : True
+
+      Pry01 :
+        UsersList  : bob, Ziggy
+        PrxyEnable : True
+        PrxyServer : "192.168.1.41:8118"
+        PrxySecure : False
+
+      DefaultUser : # every all users --> default if user not found
+        UsersList   :
+        PrxyEnable  : False
+        PrxyServer  : 
+        PrxySecure  : False
+
+Work:
+  SSIDLNetworkList : balabala
+  DNSSuffix        : lan.balabala
+  CheckDnsName     : balabalacomputer
