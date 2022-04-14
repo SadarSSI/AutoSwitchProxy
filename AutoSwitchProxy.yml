@@ -16,9 +16,8 @@ Default:
   PrxySecure  : False
 
 Home:
-  SSIDLNetworkList : 00-WFx, 00-SDRx
+  SSIDLNetworkList : myWIFI00, myWIFI01
   DNSSuffix        : home.lan
-  CheckDnsName     : lansces
 
   ProxyList:
       Pry00 :
